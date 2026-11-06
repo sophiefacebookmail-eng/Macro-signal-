@@ -1,0 +1,36 @@
+bot:
+  scan_interval_seconds: 900
+  timeframe: "15min"
+  candle_count: 250
+  minimum_confluence: 3
+  request_spacing_seconds: 9
+  retry_wait_seconds: 65
+
+markets:
+  - symbol: "XAU/USD"
+    label: "XAUUSD"
+    asset_class: "metal"
+  - symbol: "GBP/USD"
+    label: "GBPUSD"
+    asset_class: "forex"
+  - symbol: "EUR/USD"
+    label: "EURUSD"
+    asset_class: "forex"
+  - symbol: "USD/JPY"
+    label: "USDJPY"
+    asset_class: "forex"
+  - symbol: "BTC/USD"
+    label: "BTCUSD"
+    asset_class: "crypto"
+  - symbol: "ETH/USD"
+    label: "ETHUSD"
+    asset_class: "crypto"
+
+strategy:
+  ema_fast: 50
+  ema_slow: 200
+  rsi_period: 14
+  atr_period: 14
+  stop_atr_multiple: 1.5
+  target_1_r: 1.0
+  target_2_r: 2.0
